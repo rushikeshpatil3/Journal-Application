@@ -2,18 +2,22 @@ package com.rushikeshpatil.journalApp.controller;
 
 import com.rushikeshpatil.journalApp.entity.User;
 import com.rushikeshpatil.journalApp.serviceImpl.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@Slf4j
 public class PublicController {
 
     @Autowired
     private UserService userService;
     @GetMapping("/health-check")
     public String healthCheck() {
+        log.debug("Health is good");
+        log.info("Health is OK...!!");
         return "Ok";
     }
 
