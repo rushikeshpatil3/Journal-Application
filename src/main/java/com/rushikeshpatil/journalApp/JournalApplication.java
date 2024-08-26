@@ -28,8 +28,10 @@ public class JournalApplication {
         return new MongoTransactionManager(dbFactory);
     }
 
-//    @Bean
-//    public RestTemplate restTemplate(){
-//        return new RestTemplate();
-//    }
+    @Bean
+    public RestTemplate restTemplate(){
+        return new RestTemplate();
+    }
+
+
 }
